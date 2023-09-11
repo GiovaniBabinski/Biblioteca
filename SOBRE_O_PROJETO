@@ -1,0 +1,4 @@
+Sistema de controle de biblioteca Virtual colaborativa em que cada usuário registrado pode cadastrar livros em sua conta e manipular os dados referentes aos seus livros. O usuário pode realizar empréstimos para outras pessoas, 
+tanto para outros usuários ativos no sistema e também  pessoas anônimas.  Além do cadastro de livros, o sistema pode cadastrar novas categorias e empréstimos 
+e deixar registrado no sistema. E ainda o usuário do sistema pode analisar os empréstimos que realizou e ver a data de empréstimo, a data de devolução, a duração do empréstimo e se o livro ainda foi devolvido ou
+não. Com base nisso, ao ser devolvido o livro, o usuário avalia a devolução do emprestado e  pode verificar seu histórico de livros utilizados sabendo se devolveu ou não.
