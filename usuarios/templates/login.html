@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block body%}
+
+<!-- Status com mensagens de retorno sobre autenticação de login-->
+
+<div class="container mt-4">
+
+    {% if status == '1' %}
+    <div class="alert alert-danger" role="alert">
+        Login, inválido! Tente novamente.
+    </div>
+    {% endif%}
+
+    {% if status == '2' %}
+    <div class="alert alert-danger" role="alert">
+        Faça o login para acessar o sistema!
+    </div>
+    {% endif %}
+
+    <!-- Formulario de login do usuario-->
+
+    <div class="row">
+        <div class="col-md-3"> </div>
+        <div class="col-md">
+            <h1>Entrar no sistema</h1>
+            <hr/>
+            <form method="POST" action="{% url 'valida_login' %}">
+                {% csrf_token %}
+                <label>Email</label>
+                <input name="email" class="form-control" type="email" placeholder="Email">
+                <br>
+                <label>Senha</label>
+                <input name="senha" class="form-control" type="password" placeholder="Senha">
+                <br>
+                <input class="btn btn-primary" type="submit" value="Entrar">
+                <a href="{% url 'cadastro' %}" class="btn btn-success">Cadastro</a>
+            </form>
+        </div>
+        <div class="col-md-3"> </div>
+    </div>
+</div>
+
+
+{% endblock %}
